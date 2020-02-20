@@ -5,13 +5,13 @@
 // Referência dos elementos
 
 // Botão do menu
-var btnMenu = document.getElementById('btnMenu');
+var btnMenu = $('btnMenu');
 
 // Menu principal
-var nav = document.getElementById('nav');
+var nav = $('nav');
 
 // Fundo do menu
-var modalMenu = document.getElementById('modalMenu');
+var modalMenu = $('modalMenu');
 
 // Ajustes iniciais
 hideMenu();
@@ -43,7 +43,7 @@ function showMenu() {
     nav.style.display = 'block';        // mostra o fundo do menu
 
     // Gira o ícone do menu
-    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-270');
+    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-90');
 
 }
 
@@ -54,9 +54,11 @@ function hideMenu() {
     nav.style.display = 'none';         // Oculta o funfo do menu
     
     // "Desgira" o ícone do menu
-    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270');
+    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-90');
     
 }
 
-// <i class="fas fa-fw fa-bars"></i> --> hideMenu
-// <i class="fas fa-fw fa-times"></i> --> showMenu
+// Função que serve de atalho para "document.getElementById"
+function $(objId) {
+    return document.getElementById(objId);
+}
