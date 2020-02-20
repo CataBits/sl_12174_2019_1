@@ -28,6 +28,9 @@ a:hover {
 /* Fundo do App */
 body {
     background-color: slategray;
+    background-image: url('/img/fundo01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Wrap */
@@ -37,7 +40,7 @@ body {
     position: relative;
     max-width: 960px;
     margin: 0 auto;
-    background-color: white;
+    display: flex;
 }
 
 /* Cabeçalho (header) */
@@ -106,11 +109,13 @@ body {
     z-index: 50;
 }
 
+
 /* Conteúdo central (main) */
 .main {
-    background-color: white;
+    background-color: rgba(255, 255, 255, .8);
     overflow: auto;
     margin: 3rem 0 1rem 0;
+    flex-grow: 1;
 }
 
 
