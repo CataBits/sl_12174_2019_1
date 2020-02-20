@@ -37,10 +37,12 @@ function routing(ev) {
     // Se o link.href não começa com '#'
     } else {
 
+        // Executar o link em nova aba-janela
+        window.open(href);
+
     }
 
 }
-
 
 // Carrega a página por AJAX na <main>...</main>
 function load(page = 'pages/home.html') {

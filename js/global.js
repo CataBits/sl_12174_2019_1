@@ -62,3 +62,8 @@ function hideMenu() {
 function $(objId) {
     return document.getElementById(objId);
 }
+
+// função que serve de atalho para "console.log()"
+function _(txtLog) {
+    console.log(txtLog);
+}
