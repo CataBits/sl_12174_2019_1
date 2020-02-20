@@ -3,14 +3,22 @@
 // Carrega a página "home.html" na inicialização
 load('pages/home.html');
 
-// Referência a todos os <a>...</a> do documento
-var links = document.getElementsByTagName('a');
+// Monitora os links
+linkMonitor();
 
-// Obtendo cada <a>...</a> da coleção
-for ( var i = 0; i < links.length; i++ ) {
+// Função que monitora os links
+function linkMonitor() {
 
-    // Cria o monitor deste link
-    links[i].addEventListener('click', routing, false);
+    // Referência a todos os <a>...</a> do documento
+    var links = document.getElementsByTagName('a');
+
+    // Obtendo cada <a>...</a> da coleção
+    for ( var i = 0; i < links.length; i++ ) {
+
+        // Cria o monitor deste link
+        links[i].addEventListener('click', routing, false);
+
+    }
 
 }
 
@@ -50,6 +58,7 @@ function load(page = 'pages/home.html') {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             $('main').innerHTML = this.responseText;
+            linkMonitor();
         }
     };
     xhttp.open("GET", page, true);
