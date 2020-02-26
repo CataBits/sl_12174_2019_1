@@ -2,59 +2,46 @@
 /* JavaScript principal do App */
 /*******************************/
 
-// Referência dos elementos
+var btnMenu = $('btnMenu');         // Referência do botão do menu
+var nav = $('nav');                 // Referência do menu principal
+var modalMenu = $('modalMenu');     // Referência do fundo do menu
 
-// Botão do menu
-var btnMenu = $('btnMenu');
+hideMenu();     // Ajustes iniciais
 
-// Menu principal
-var nav = $('nav');
+btnMenu.addEventListener('click', toggleMenu, false);   // Quando clicar no botão do menu
 
-// Fundo do menu
-var modalMenu = $('modalMenu');
-
-// Ajustes iniciais
-hideMenu();
-
-// Quando clicar no botão do menu
-btnMenu.addEventListener('click', toggleMenu, false);
-
-// Quando clicar no fundo do menu
-modalMenu.addEventListener('click', hideMenu, false);
+modalMenu.addEventListener('click', hideMenu, false);   // Quando clicar no fundo do menu
 
 // Função que controla o menu
 function toggleMenu(event) {
 
-    // Evita a ação normal do link no HTML
-    event.preventDefault();
+    event.preventDefault();     // Evita a ação normal do link no HTML
 
-    // Faz o "toggle" (liga-desliga)
-    if ( nav.style.display == 'none' )  // Se o menu está oculto:
-        showMenu();                     // Mostra o menu
-    else                                // Senão:
-        hideMenu();                     // Oculta o menu
+    // Faz o "toggle" (liga-desliga) do menu
+    if ( navOn )        // Se o menu está ativo:
+        hideMenu();     // Oculta o menu.
+    else                // Senão:
+        showMenu();     // Mostra o menu.
 
 }
 
 // Função que mostra o menu
 function showMenu() {
 
-    modalMenu.style.display = 'block';  // mostra o menu
-    nav.style.display = 'block';        // mostra o fundo do menu
-
-    // Gira o ícone do menu
-    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-90');
+    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-90'); // Gira o ícone do menu
+    modalMenu.classList.add('animOpen'); // mostra o fundo do menu
+    nav.classList.add('animOpen'); // mostra o menu    
+    navOn = true; // Menu estpa aberto
 
 }
 
 // Função que oculta o menu
 function hideMenu() {
 
-    modalMenu.style.display = 'none';   // Oculta o menu
-    nav.style.display = 'none';         // Oculta o funfo do menu
-    
-    // "Desgira" o ícone do menu
-    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-90');
+    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-90'); // "Desgira" o ícone do menu
+    nav.classList.remove('animOpen'); // Oculta o menu
+    modalMenu.classList.remove('animOpen'); // Oculta o fundo do menu
+    navOn = false; // Menu está fechado
     
 }
 
@@ -63,7 +50,7 @@ function $(objId) {
     return document.getElementById(objId);
 }
 
-// função que serve de atalho para "console.log()"
+// Função que serve de atalho para "console.log()"
 function _(txtLog) {
     console.log(txtLog);
 }
