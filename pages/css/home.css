@@ -8,10 +8,12 @@
     text-align: center;
 }
 .quadro {
+    display: block;
     margin: 1rem;
     border-radius: .3rem;
     padding: .5rem;
     box-shadow: 5px 5px 5px grey;
+    color: black;
 }
 .quadro div {
     margin-top: .3rem;
@@ -31,4 +33,20 @@
 }
 .q2 i {
     color: rgb(0, 78, 0);
+}
+
+/* Terceiro quadro */
+.q3 {
+    background: rgb(252, 252, 148);
+}
+.q3 i {
+    color: rgb(160, 77, 0);
+}
+
+/* Quarto quadro */
+.q4 {
+    background: rgb(187, 217, 241);
+}
+.q4 i {
+    color: rgb(31, 70, 102);
 }

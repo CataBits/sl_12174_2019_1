@@ -28,7 +28,7 @@ function toggleMenu(event) {
 // Função que mostra o menu
 function showMenu() {
 
-    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-90'); // Gira o ícone do menu
+    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-270'); // Gira o ícone do menu
     modalMenu.classList.add('animOpen'); // mostra o fundo do menu
     nav.classList.add('animOpen'); // mostra o menu    
     navOn = true; // Menu estpa aberto
@@ -38,7 +38,7 @@ function showMenu() {
 // Função que oculta o menu
 function hideMenu() {
 
-    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-90'); // "Desgira" o ícone do menu
+    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270'); // "Desgira" o ícone do menu
     nav.classList.remove('animOpen'); // Oculta o menu
     modalMenu.classList.remove('animOpen'); // Oculta o fundo do menu
     navOn = false; // Menu está fechado
@@ -47,10 +47,14 @@ function hideMenu() {
 
 // Função que serve de atalho para "document.getElementById"
 function $(objId) {
+
     return document.getElementById(objId);
+
 }
 
 // Função que serve de atalho para "console.log()"
 function _(txtLog) {
+
     console.log(txtLog);
+
 }
