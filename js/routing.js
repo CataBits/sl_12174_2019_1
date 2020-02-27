@@ -9,7 +9,7 @@ load('pages/home.html');
 linkMonitor();
 
 // Função que monitora os links
-function linkMonitor() {
+function linkMonitor() { 
 
     // Referência a todos os <a>...</a> do documento
     var links = document.getElementsByTagName('a');
