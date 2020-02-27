@@ -1,3 +1,7 @@
+/*********************************************/
+/* JavaScript principal do App usando jQuery */
+/*********************************************/
+
 // Executa o programa principal quando o documento for carregado
 $(document).ready(myApp);
 
@@ -39,5 +43,12 @@ function showMenu() {
     $('#btnMenu i').addClass('fa-rotate-270');  // Troca o ícone do menu
     $('#modalMenu').show('fast');               // Mostra o fundo do menu
     $('#nav').show('fast');                     // Mostra o menu
+
+}
+
+// Atalho para "console.log()"
+function _(txtLog) {
+
+    console.log(txtLog);
 
 }
