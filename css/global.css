@@ -141,7 +141,7 @@ body {
 /* Slide do menu */
 .anim {
     overflow: hidden;
-    transition: all .5s ease;
+    transition: all .3s ease;
     max-height: 0;
 }
 .animOpen {

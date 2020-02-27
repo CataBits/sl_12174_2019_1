@@ -2,22 +2,31 @@
 /* JavaScript principal do App */
 /*******************************/
 
-var btnMenu = $('btnMenu');         // Referência do botão do menu
-var nav = $('nav');                 // Referência do menu principal
-var modalMenu = $('modalMenu');     // Referência do fundo do menu
+// Referência do botão do menu
+var btnMenu = $('btnMenu');
 
-hideMenu();     // Ajustes iniciais
+// Referência do menu principal
+var nav = $('nav');
 
-btnMenu.addEventListener('click', toggleMenu, false);   // Quando clicar no botão do menu
+// Referência do fundo do menu
+var modalMenu = $('modalMenu');
 
-modalMenu.addEventListener('click', hideMenu, false);   // Quando clicar no fundo do menu
+// Ajustes iniciais: oculta o menu
+hideMenu();
+
+// Quando clicar no botão do menu
+btnMenu.addEventListener('click', toggleMenu, false);
+
+// Quando clicar no fundo do menu
+modalMenu.addEventListener('click', hideMenu, false);
 
 // Função que controla o menu
 function toggleMenu(event) {
 
-    event.preventDefault();     // Evita a ação normal do link no HTML
+    // Evita a ação normal do link no HTML
+    event.preventDefault();
 
-    // Faz o "toggle" (liga-desliga) do menu
+    ///// Faz o "toggle" (liga-desliga) do menu
     if ( navOn )        // Se o menu está ativo:
         hideMenu();     // Oculta o menu.
     else                // Senão:
@@ -28,20 +37,34 @@ function toggleMenu(event) {
 // Função que mostra o menu
 function showMenu() {
 
-    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-270'); // Gira o ícone do menu
-    modalMenu.classList.add('animOpen'); // mostra o fundo do menu
-    nav.classList.add('animOpen'); // mostra o menu    
-    navOn = true; // Menu estpa aberto
+    // Gira o ícone do menu
+    btnMenu.getElementsByTagName('i')[0].classList.add('fa-rotate-270');
+
+    // mostra o fundo do menu
+    modalMenu.classList.add('animOpen');
+
+    // mostra o menu
+    nav.classList.add('animOpen');
+
+    // Menu esta aberto
+    navOn = true;
 
 }
 
 // Função que oculta o menu
 function hideMenu() {
 
-    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270'); // "Desgira" o ícone do menu
-    nav.classList.remove('animOpen'); // Oculta o menu
-    modalMenu.classList.remove('animOpen'); // Oculta o fundo do menu
-    navOn = false; // Menu está fechado
+    // "Desgira" o ícone do menu
+    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270'); 
+
+    // Oculta o menu
+    nav.classList.remove('animOpen');
+
+    // Oculta o fundo do menu
+    modalMenu.classList.remove('animOpen');
+
+    // Menu está fechado
+    navOn = false;
     
 }
 

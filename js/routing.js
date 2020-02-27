@@ -1,4 +1,6 @@
+/***********************/
 /* Roteamento de links */
+/***********************/
 
 // Carrega a página "home.html" na inicialização
 load('pages/home.html');
@@ -37,9 +39,15 @@ function routing(ev) {
     // Verifica se o link.href começa com '#'
     if ( href.substr(0, 1) == '#') {
 
-        // Carrega a página correspondente
+        ///// Carrega a página correspondente /////
+
+        // Remove o '#' do início do link
         var pg = href.substr(1);
+
+        // Monta o link e carrega
         load('pages/' + pg + '.html');
+
+        // Oculta o menu principal
         hideMenu();
 
     // Se o link.href não começa com '#'
@@ -54,13 +62,30 @@ function routing(ev) {
 
 // Carrega a página por AJAX na <main>...</main>
 function load(page = 'pages/home.html') {
+
+    // Cria o objeto HTTP Ajax
     var xhttp = new XMLHttpRequest();
+
+    // Monitora a carga do documento solicitado
     xhttp.onreadystatechange = function() {
+
+        // Se o documento está na memória local:
         if (this.readyState == 4 && this.status == 200) {
+
+            // Carrega o conteúdo obtido na página
             $('main').innerHTML = this.responseText;
+
+            // Recarrega o monitor de links para a nova página
             linkMonitor();
+
         }
+
     };
+
+    // Solicita o documento do servidor
     xhttp.open("GET", page, true);
+
+    // Envia a solicitação ao servidor
     xhttp.send();
+
 }
