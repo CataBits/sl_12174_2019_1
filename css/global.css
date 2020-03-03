@@ -1,10 +1,14 @@
 /* CSS do tema */
 
+
 /* CSS Reset */
+
 * {
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -13,19 +17,28 @@ html, body {
     font-family: sans-serif;
     font-size: 16px;
 }
-h1, h2, h3, h4, h5, p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     margin: 1rem 0;
 }
+
 a {
     color: steelblue;
     text-decoration: none;
 }
+
 a:hover {
     color: orangered;
 }
 
 
 /* Fundo do App */
+
 body {
     background-color: slategray;
     background-image: url('/img/fundo01.png');
@@ -33,7 +46,9 @@ body {
     background-size: cover;
 }
 
+
 /* Wrap */
+
 .wrap {
     width: 100%;
     height: 100%;
@@ -43,7 +58,9 @@ body {
     display: flex;
 }
 
+
 /* Cabeçalho (header) */
+
 .header {
     background: rgb(109, 0, 0);
     display: flex;
@@ -55,27 +72,32 @@ body {
     width: 100%;
     z-index: 100;
 }
+
 .header a {
     color: white;
     display: inline-block;
     padding: .8rem;
     font-size: 1.2rem;
 }
+
 .header a:hover {
     background: orangered;
 }
+
 .header h1 {
     color: white;
     font-size: 1.2rem;
     margin: 0;
     letter-spacing: .15rem;
 }
+
 .header * {
     transition: .3s;
 }
 
 
 /* Menu principal */
+
 .nav {
     background: #333;
     width: 70%;
@@ -86,20 +108,26 @@ body {
     z-index: 100;
     display: none;
 }
+
 .nav a {
     color: white;
     display: block;
-    padding: .8rem;
+    padding: 1rem;
 }
+
 .nav a:hover {
     background: orangered;
 }
+
 .nav hr {
     border: 0;
     margin: 0;
     border-top: 1px dotted rgb(212, 212, 212);
 }
+
+
 /* Fundo do menu */
+
 .modalbg {
     background: rgba(0, 0, 0, .6);
     position: fixed;
@@ -113,6 +141,7 @@ body {
 
 
 /* Conteúdo central (main) */
+
 .main {
     background-color: rgba(255, 255, 255, .9);
     overflow: auto;
@@ -122,6 +151,7 @@ body {
 
 
 /* Rodapé (footer) */
+
 .footer {
     background: rgb(109, 0, 0);
     color: white;
@@ -133,19 +163,24 @@ body {
     left: 0;
     width: 100%;
 }
+
 .footer a {
     color: white;
 }
+
 .footer a:hover {
     color: rgb(255, 174, 174);
 }
 
+
 /* Slide do menu */
+
 .anim {
     overflow: hidden;
     transition: all .3s ease;
     max-height: 0;
 }
+
 .animOpen {
-  max-height: 100vh;
+    max-height: 100vh;
 }
