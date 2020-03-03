@@ -19,30 +19,30 @@ function myApp() {
 // Controle do menu
 function toggleMenu(e) {
 
-    e.preventDefault();                 // Evita a ação normal do link no HTML
+    e.preventDefault(); // Evita a ação normal do link no HTML
 
-    if ( $('#nav').is(':visible') )     // Se o menu está visível:
-        hideMenu();                     // Oculta o menu;
-    else                                // Se o menu está oculto:
-        showMenu();                     // Mostra o menu;
+    if ($('#nav').is(':visible')) // Se o menu está visível:
+        hideMenu(); // Oculta o menu;
+    else // Se o menu está oculto:
+        showMenu(); // Mostra o menu;
 
 }
 
 // Oculta o menu
 function hideMenu() {
 
-    $('#nav').hide('fast');                         // Oculta o menu
-    $('#modalMenu').hide('fast');                   // Oculta o fundo do menu
-    $('#btnMenu i').removeClass('fa-rotate-270');   // Troca o ícone do menu
+    $('#nav').hide('fast'); // Oculta o menu
+    $('#modalMenu').hide('fast'); // Oculta o fundo do menu
+    $('#btnMenu i').removeClass('fa-rotate-270'); // Troca o ícone do menu
 
 }
 
 // Mostra o menu
 function showMenu() {
 
-    $('#btnMenu i').addClass('fa-rotate-270');  // Troca o ícone do menu
-    $('#modalMenu').show('fast');               // Mostra o fundo do menu
-    $('#nav').show('fast');                     // Mostra o menu
+    $('#btnMenu i').addClass('fa-rotate-270'); // Troca o ícone do menu
+    $('#modalMenu').show('fast'); // Mostra o fundo do menu
+    $('#nav').show('fast'); // Mostra o menu
 
 }
 

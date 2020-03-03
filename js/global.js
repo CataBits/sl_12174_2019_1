@@ -27,10 +27,10 @@ function toggleMenu(event) {
     event.preventDefault();
 
     ///// Faz o "toggle" (liga-desliga) do menu
-    if ( navOn )        // Se o menu está ativo:
-        hideMenu();     // Oculta o menu.
-    else                // Senão:
-        showMenu();     // Mostra o menu.
+    if (navOn) // Se o menu está ativo:
+        hideMenu(); // Oculta o menu.
+    else // Senão:
+        showMenu(); // Mostra o menu.
 
 }
 
@@ -55,7 +55,7 @@ function showMenu() {
 function hideMenu() {
 
     // "Desgira" o ícone do menu
-    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270'); 
+    btnMenu.getElementsByTagName('i')[0].classList.remove('fa-rotate-270');
 
     // Oculta o menu
     nav.classList.remove('animOpen');
@@ -65,7 +65,7 @@ function hideMenu() {
 
     // Menu está fechado
     navOn = false;
-    
+
 }
 
 // Função que serve de atalho para "document.getElementById"

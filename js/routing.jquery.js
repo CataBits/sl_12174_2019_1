@@ -9,7 +9,7 @@ $(document).ready(runRoutes);
 function runRoutes() {
 
     // Carrega a página inicial
-    $.get('pages/home.html', '', function( data ){
+    $.get('pages/home.html', '', function(data) {
         $('#main').html(data);
     });
 
@@ -28,10 +28,10 @@ function routing(e) {
     var href = $(this).attr('href');
 
     // Se clicou no botão do menu, não faz nada
-    if ( href == '#menu' ) return false;
+    if (href == '#menu') return false;
 
     // Se clicou em uma rota (inicia com '#')
-    if ( href.substr(0, 1) == '#') {
+    if (href.substr(0, 1) == '#') {
 
         // Remove o '#' do início do link
         var pg = href.substr(1);
@@ -40,7 +40,7 @@ function routing(e) {
         var doc = 'pages/' + pg + '.html';
 
         // Carrega o documento
-        $.get(doc, '', function( data ) {
+        $.get(doc, '', function(data) {
 
             // Grava o documento na tag <main>
             $('#main').html(data);

@@ -9,13 +9,13 @@ load('pages/home.html');
 linkMonitor();
 
 // Função que monitora os links
-function linkMonitor() { 
+function linkMonitor() {
 
     // Referência a todos os <a>...</a> do documento
     var links = document.getElementsByTagName('a');
 
     // Obtendo cada <a>...</a> da coleção
-    for ( var i = 0; i < links.length; i++ ) {
+    for (var i = 0; i < links.length; i++) {
 
         // Cria o monitor deste link
         links[i].addEventListener('click', routing, false);
@@ -34,10 +34,10 @@ function routing(ev) {
     var href = this.getAttribute('href');
 
     // Verifica se clicou no botão do menu (#menu)
-    if ( href == '#menu') return false;
+    if (href == '#menu') return false;
 
     // Verifica se o link.href começa com '#'
-    if ( href.substr(0, 1) == '#') {
+    if (href.substr(0, 1) == '#') {
 
         ///// Carrega a página correspondente /////
 
@@ -50,7 +50,7 @@ function routing(ev) {
         // Oculta o menu principal
         hideMenu();
 
-    // Se o link.href não começa com '#'
+        // Se o link.href não começa com '#'
     } else {
 
         // Executar o link em nova aba-janela
