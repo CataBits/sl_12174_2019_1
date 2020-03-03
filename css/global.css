@@ -144,6 +144,16 @@ body {
     margin-left: auto;
 }
 
+#usermenu img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+#perfil {
+    display: none;
+}
+
 
 /* Fundo do menu */
 
