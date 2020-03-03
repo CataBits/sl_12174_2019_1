@@ -132,6 +132,18 @@ body {
     margin: 0;
 }
 
+#usermenu {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+#usermenu>*:last-child {
+    margin-left: auto;
+}
+
 
 /* Fundo do menu */
 

@@ -27,8 +27,8 @@ function routing(e) {
     // Obtém o link da tag <a> clicada
     var href = $(this).attr('href');
 
-    // Se clicou no botão do menu, não faz nada
-    if (href == '#menu') return false;
+    // Se clicou no botão do menu ou login/logout, não faz nada
+    if (href == '#menu' || href == '#user') return false;
 
     // Se clicou em uma rota (inicia com '#')
     if (href.substr(0, 1) == '#') {

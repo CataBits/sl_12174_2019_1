@@ -24,6 +24,12 @@
 
         <nav class="nav" id="nav">
 
+            <span id="usermenu">
+                <i class="fas fa-fw fa-spinner fa-spin"></i>
+                <span>&nbsp;Aguarde...</span>
+            <a href="#user"><i class="fas fa-fw fa-sign-in-alt"></i></a>
+            </span>
+            <hr>
             <a href="#artigos"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
             <a href="#noticias"><i class="far fa-fw fa-newspaper"></i> Notícias</a>
             <hr>
@@ -49,6 +55,18 @@
 
     <!-- Carrega o framework jQuery -->
     <script src="js/jquery.min.js"></script>
+
+    <!-- Carrega o API-Core do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+    <!-- Carrega a API do Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+
+    <!-- Configura e conecta o Farebase -->
+    <script src="js/fbconfig.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="js/fbauth.js"></script>
 
     <!-- Processa o menu principal e outras coisas -->
     <script src="js/global.jquery.js"></script>
