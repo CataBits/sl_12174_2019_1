@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,62 +9,64 @@
     <link rel="stylesheet" href="css/global.css">
     <title>Scriptando</title>
 </head>
+
 <body>
 
-<div class="wrap">
+    <div class="wrap">
 
-    <header class="header" id="header">
+        <header class="header" id="header">
 
-        <a href="#home"><i class="fas fa-fw fa-laptop-code"></i></a>
-        <h1>Scriptando</h1>
-        <a href="#menu" id="btnMenu" data-nome="Luferat"><i class="fas fa-fw fa-ellipsis-v"></i></a>
+            <a href="#home"><i class="fas fa-fw fa-laptop-code"></i></a>
+            <h1>Scriptando</h1>
+            <a href="#menu" id="btnMenu" data-nome="Luferat"><i class="fas fa-fw fa-ellipsis-v"></i></a>
 
-    </header>
+        </header>
 
-    <nav class="nav" id="nav">
+        <nav class="nav" id="nav">
 
-        <a href="#artigos"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
-        <a href="#noticias"><i class="far fa-fw fa-newspaper"></i> Notícias</a>
-        <hr>
-        <a href="#contatos"><i class="fas fa-fw fa-mail-bulk"></i> Contatos</a>
-        <a href="#sobre"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
-        <hr>
-        <a href="#config"><i class="fas fa-fw fa-cogs"></i> Configurações</a>
+            <a href="#artigos"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
+            <a href="#noticias"><i class="far fa-fw fa-newspaper"></i> Notícias</a>
+            <hr>
+            <a href="#contatos"><i class="fas fa-fw fa-mail-bulk"></i> Contatos</a>
+            <a href="#sobre"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
+            <hr>
+            <a href="#config"><i class="fas fa-fw fa-cogs"></i> Configurações</a>
 
-    </nav>
+        </nav>
 
-    <!-- Conteúdo da página será carregado aqui pelo JavaScript -->
-    <main class="main" id="main"></main>
+        <!-- Conteúdo da página será carregado aqui pelo JavaScript -->
+        <main class="main" id="main"></main>
 
-    <footer class="footer" id="footer">
+        <footer class="footer" id="footer">
 
-        &copy; 2020 <a href="http://luferat.net">André Luferat</a>
+            &copy; 2020 <a href="http://luferat.net">André Luferat</a>
 
-    </footer>
+        </footer>
 
-</div>    
+    </div>
 
-<div class="modalbg" id="modalMenu"></div>
+    <div class="modalbg" id="modalMenu"></div>
 
-<!-- Carrega a API do Firebase -->
-<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <!-- Carrega a API do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
-<!-- Produtos do Firebase -->
-<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <!-- Produtos do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
 
-<!-- Minha conexão com o Firebase -->
-<script src="js/firebase.js"></script>
+    <!-- Minha conexão com o Firebase -->
+    <script src="js/fbconfig.js"></script>
 
-<!-- Autenticação com Firebase -->
-<script src="js/fbauth.js"></script>
+    <!-- Autenticação com Firebase -->
+    <script src="js/fbauth.js"></script>
 
-<!-- Carrega o framework jQuery -->
-<script src="js/jquery.min.js"></script>
+    <!-- Carrega o framework jQuery -->
+    <script src="js/jquery.min.js"></script>
 
-<!-- Processa o menu principal e outras coisas -->
-<script src="js/global.jquery.js"></script>
+    <!-- Processa o menu principal e outras coisas -->
+    <script src="js/global.jquery.js"></script>
 
-<!-- Processa as rotas internas e links externos -->
-<script src="js/routing.jquery.js"></script>
+    <!-- Processa as rotas internas e links externos -->
+    <script src="js/routing.jquery.js"></script>
 </body>
+
 </html>
