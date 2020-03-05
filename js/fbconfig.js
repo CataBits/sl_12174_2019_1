@@ -11,3 +11,6 @@ var firebaseConfig = {
 
 // Initializa o Firebase
 firebase.initializeApp(firebaseConfig);
+
+// Conexão com o Firestore
+var db = firebase.firestore();

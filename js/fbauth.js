@@ -46,6 +46,11 @@ function Login() {
     // Login usando pop-up
     firebase.auth().signInWithPopup(provider);
 
+    // Redirecionar home
+    $.get('pages/home.html', '', function(data) {
+        $('#main').html(data);
+    });
+
     // (opcional) Oculta o menu principal
     //hideMenu();
 
@@ -58,6 +63,11 @@ function Logout() {
 
         // Faz logout
         firebase.auth().signOut();
+
+        // Redirecionar home
+        $.get('pages/home.html', '', function(data) {
+            $('#main').html(data);
+        });
 
         // (opcional) Oculta o menu principal
         //hideMenu();

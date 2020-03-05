@@ -1,1 +1,25 @@
 /* CSS de artigos */
+
+.artigos {
+    padding: 0 1rem;
+}
+
+.artigos .spinner {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: rgb(144, 196, 238);
+    border-radius: .4rem;
+}
+
+.artigos .login {
+    display: table;
+    margin: auto;
+    background: linear-gradient(rgb(120, 180, 230), rgb(27, 62, 90));
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+
+.artigos .login:hover {
+    background: linear-gradient(rgb(241, 121, 77), rgb(133, 35, 0));
+}
